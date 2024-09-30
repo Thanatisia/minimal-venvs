@@ -45,3 +45,8 @@
     - Updated document 'demo.md'
         + Added titles to the image
 
+#### 2159H
+- Updates
+    - Updated document 'README.md'
+        + Added new blueprints and design scope documentations
+

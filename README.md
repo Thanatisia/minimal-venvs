@@ -61,6 +61,43 @@ Certain virtual environments, like the previously mentioned python virtual envir
 
 ### Usage
 
+### Design Scope and Documentations
+
+### Blueprint
+
+> Pre-Requisites
+
+- Customization
+    + Edit the environment variables (as necessary)
+    + Edit the local variables in the script manually or using '--edit' (WIP), adding components into your virtual environment container (i.e. binary, directories)
+
+> General Operational Flow
+
+1. Configure the script variables (optional)
+2. Run the script
+    - Perform initial setup (one-time as long as directory doesnt exist in the current working directory (custom directory WIP))
+        + Create any subdirectories when necessary
+    - Perform pre-chroot script and variable validation
+        + Copy files, directories or binaries when necessary
+        + Map/Pipe/Passthrough the environment variables (and value) specified in the configuration variables into the virtual environment
+    - The script will then jump/"chroot" you into a new session of your shell with a custom startup file for the shell to execute on initial entry
+        + The new shell will execute the commands specified in the configuration variables (if any)
+
+> UML - Use Case Workflow/Sequence Diagram
+
+```
+[host-system]                                                                                                                             [venv-root-directory]
+            |--------------- Initial Setup ------> Initialize and Generate virtual environment (venv) root directory -------------------> |
+            |                                      - Create the virtual environment (venv)'s root directory and nested subdirectories
+            |                                      - Copy files, directories and binaries/executables
+            |--- Pre-Chroot script validation ---> Check the variable definitions and values for new directories/entries ---------------> |
+            |                                      - Create any new directories if added into the variables
+            |                                      - Copy any new files/directories if added into the variables
+            |---------------- Chroot/Entry ------> Chroot/Jump into the shell with a new shell session ---------------------------------> |
+                                                   - Passthrough/Map the environment variables to values specified in the configurations
+                                                   - Execute the specified startup commands in the shell during initial source/entry
+```
+
 ## Wiki
 
 ### Pages
