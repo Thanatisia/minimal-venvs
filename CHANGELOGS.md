@@ -39,3 +39,9 @@
 - Updates
     - Updated document 'README.md'
         + Added pages
+
+#### 1346H
+- Updates
+    - Updated document 'demo.md'
+        + Added titles to the image
+
