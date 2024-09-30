@@ -63,6 +63,9 @@ Certain virtual environments, like the previously mentioned python virtual envir
 
 ## Wiki
 
+### Pages
++ [Usage Demo and Examples](demo.md)
+
 ### List of templates
 > Programming Languages
 + [C](templates/programming-languages/c-venv-chroot.sh)

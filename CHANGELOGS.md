@@ -25,3 +25,17 @@
 
 - Updates
 
+#### 1332H
+- New
+    + Added new document 'demo.md'
+    - Added new directory 'res/' for Resources
+        - Added new directory 'assets/' for Blob file resources
+            - Added new directory 'screenshots/' for demo screenshots
+                + Added new demo screenshot 'demo_case_golang_before_init.png'
+                + Added new demo screenshot 'demo_case_golang_init_venv.png'
+                + Added new demo screenshot 'demo_case_golang_venv_chroot_proof.png'
+                + Added new demo screenshot 'demo_case_golang_venv_exit.png'
+
+- Updates
+    - Updated document 'README.md'
+        + Added pages
